@@ -1,4 +1,10 @@
 def sum_pairs(nums, goal):
+    seen_num = set()
+    for num in nums:
+        second_num = goal - num
+        if second_num in seen_num:
+            return (second_num, num)
+        seen_num.add(num)
     """Return tuple of first pair of nums that sum to goal.
 
     For example:

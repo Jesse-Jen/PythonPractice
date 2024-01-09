@@ -1,4 +1,12 @@
 def two_list_dictionary(keys, values):
+    results = {}
+    for i in range(len(keys)):
+        if i < len(values):
+            results[keys[i]] = values[i]
+        else:
+            results[keys[i]] = None
+    return results
+
     """Given keys and values, make dictionary of those.
     
         >>> two_list_dictionary(['x', 'y', 'z'], [9, 8, 7])

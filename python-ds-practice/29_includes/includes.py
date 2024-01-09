@@ -1,4 +1,14 @@
 def includes(collection, sought, start=None):
+
+    if isinstance(collection, dict):
+        return sought in collection.values()
+    
+    if start is None or isinstance(collection, set):
+        return sought in collection
+    else:
+        return sought in collection[start:]
+
+
     """Is sought in collection, starting at index start?
 
     Return True/False if sought is in the given collection:

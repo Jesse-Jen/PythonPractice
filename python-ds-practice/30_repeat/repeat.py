@@ -1,4 +1,10 @@
 def repeat(phrase, num):
+    results = ''
+    if num >= 1:
+        return phrase * num
+    else:
+        print('is None True')
+        return None
     """Return phrase, repeated num times.
 
         >>> repeat('*', 3)

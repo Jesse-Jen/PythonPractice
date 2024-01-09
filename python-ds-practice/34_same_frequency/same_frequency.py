@@ -1,5 +1,13 @@
 def same_frequency(num1, num2):
-    """Do these nums have same frequencies of digits?
+
+
+def num_counter(numbers):
+    counts = {}
+    for num in numbers:
+       counts[num] = counts.get(num, 0) + 1
+    return counts
+
+"""Do these nums have same frequencies of digits?
     
         >>> same_frequency(551122, 221515)
         True
